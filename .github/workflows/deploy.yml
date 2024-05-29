@@ -32,7 +32,7 @@ jobs:
      - name: Build website with Hugo
        run: hugo --minify
      - name: Deploy website with rsync
-       uses: burnett01/rsync-deployments@5.2
+       uses: burnett01/rsync-deployments@7.0.1
        with:
          switches: -avzr --quiet --delete
          path: public/
