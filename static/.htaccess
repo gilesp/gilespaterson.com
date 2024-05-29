@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteCond %{QUERY_STRING} resource=acct:(.+)
-RewriteRule ^\.well-known/webfinger /profile/%1? [L]
