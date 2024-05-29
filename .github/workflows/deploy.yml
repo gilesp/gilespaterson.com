@@ -18,23 +18,17 @@ jobs:
        with:
          submodules: true
      - name: Setup Hugo
-       uses: peaceiris/actions-hugo@v2
+       uses: peaceiris/actions-hugo@v3
        with:
-         hugo-version: ${{ env.HUGO_RELEASE }}
+         hugo-version: 'latest'
          extended: true
-       env:
-         HUGO_RELEASE: '0.126.1'
-     - name: Setup Node
-       uses: actions/setup-node@v3
-       with:
-         node-version: '21'
      - name: Cache Dependencies
-       uses: actions/cache@v2
+       uses: actions/cache@v4
        with:
-         path: ~/.npm
-         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+         path: /home/runner/.cache/hugo_cache
+         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
          restore-keys: |
-           ${{ runner.os }}-node-
+           ${{ runner.os }}-hugomod-
      - name: Run Node
        run: npm ci
      - name: Build website with Hugo
