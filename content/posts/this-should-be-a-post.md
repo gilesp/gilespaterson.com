@@ -1,0 +1,10 @@
+---
+date: 2024-05-29T14:11:00.000Z
+publishDate: 2024-05-29T14:11:00.000Z
+title: this should be a post
+category:
+  - tag1
+  - tag2
+---
+
+This is an article but should be saved as a post content type
