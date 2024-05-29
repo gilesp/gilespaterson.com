@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Checkout
-       uses: actions/checkout@v3
+       uses: actions/checkout@v4
        with:
          submodules: true
      - name: Setup Hugo
@@ -29,8 +29,6 @@ jobs:
          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
          restore-keys: |
            ${{ runner.os }}-hugomod-
-     - name: Run Node
-       run: npm ci
      - name: Build website with Hugo
        run: hugo --minify --printI18Warnings
      - name: Deploy website with rsync
