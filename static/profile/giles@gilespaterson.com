@@ -1,0 +1,15 @@
+{
+    "subject":"acct:giles@gilespaterson.com",
+    "aliases":["https://social.gilespaterson.com/users/giles","https://social.gilespaterson.com/@giles"],
+    "links":[
+        {
+            "rel":"http://webfinger.net/rel/profile-page",
+            "type":"text/html",
+            "href":"https://social.gilespaterson.com/@giles"
+        },
+        {
+            "rel":"self",
+            "type":"application/activity+json",
+            "href":"https://social.gilespaterson.com/users/giles"
+        }]
+}
