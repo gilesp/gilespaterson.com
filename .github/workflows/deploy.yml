@@ -30,7 +30,7 @@ jobs:
          restore-keys: |
            ${{ runner.os }}-hugomod-
      - name: Build website with Hugo
-       run: hugo --minify --printI18Warnings
+       run: hugo --minify
      - name: Deploy website with rsync
        uses: burnett01/rsync-deployments@5.2
        with:
