@@ -40,6 +40,10 @@ params:
   showtoc: false
   tocopen: false
 
+  mainSections:
+    - posts
+    - articles
+    - notes
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -102,20 +106,30 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: articles
+      name: articles
+      url: /articles/
       weight: 10
+    - identifier: posts
+      name: posts
+      url: /posts/
+      weight: 20
     - identifier: tags
       name: tags
       url: /tags/
-      weight: 20
+      weight: 30
     - identifier: example
       name: vurt.co.uk
       url: https://vurt.co.uk
-      weight: 30
+      weight: 40
+
+taxonomies:
+  tag: tags
+  category: categories
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
