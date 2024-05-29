@@ -1,8 +1,9 @@
-+++
-title = 'Setting Up Hugo'
-date = 2024-05-24T09:15:55+01:00
-draft = false
-+++
+---
+title: Setting Up Hugo
+date: 2024-05-24T09:15:55+01:00
+draft: false
+tags: [Hugo,IndieWeb]
+---
 This site it built with [Hugo](https://gohugo.io/), which is a static site generator. That means that I write the content as [markdown](https://www.markdownguide.org/) and then use the hugo tool to generate the html etc. that forms this website. I can then copy the html and theme stylesheets to my webhost (using rsync). This is the same approach I took with my [other website](https://www.vurt.co.uk).
 
 One issue I had with my old website was that I was limited to updating the site from my laptop - I couldn't easily fire off a quick note or post from my phone or elsewhere. Even though I had the site content stroed in github, and I could have setup hugo on other devices it was always a bit of extra friction which allowed my laziness to kick in.
